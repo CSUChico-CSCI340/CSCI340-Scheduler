@@ -3,6 +3,7 @@
 \usepackage{times}
 \usepackage{alltt}
 \usepackage{hyperref}
+\usepackage{graphicx}
 \input{decls-common}
 
 %% Page layout
@@ -15,14 +16,14 @@
 
 \begin{document}
 
-\title{CSCI340, Spring 2014\\
-Assignment 3: Writing a Scheduler
+\title{CSCI340, Fall 2014\\
+Assignment 4: Writing a Scheduler
 }
 
 \author{California State University - Chico\\
   By Bryan Dixon\\
 }
-\date{\emph{Due Date: Friday, March 7th, 2014 11:59pm}}
+\date{\emph{Due Date: Sunday, November 23rd, 2014 11:59pm}}
 
 
 \maketitle
@@ -60,7 +61,15 @@ comment at the top of {\tt schedule.cc}.
 
 \end{itemize}
 
-Looking at the {\tt schedule.cc} file, you will see that it contains a rudimentary scheduler API to add a process, remove a process, and get the next process from your scheduler. Your job is to implement the code in schedule.cc that implements a First Come First Serve (FCFS) Scheduler. 
+Looking at the {\tt schedule.cc} file, you will see that it contains a rudimentary scheduler API to add a process, remove a process, and get the next process from your scheduler. Your job is to implement the code in schedule.cc that implements a variant of a Multi Level Priority Scheduler using Round Robin schedulers. 
+
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[width=150mm]{multilevel.pdf}
+    \caption{Multi Level Round Robin Priority Scheduler}
+    \label{fig:multilevel}
+  \end{center}
+\end{figure}
 
 \section*{General Overview of Schedulers}
 \emph{Taken from Wikipedia\cite{schedules}}
@@ -86,7 +95,9 @@ In real-time environments, such as embedded systems for automatic control in ind
 
 \section*{Your Task}
 
-The task for this assignment is to implement the scheduler API provided to you in the {\tt schedule.cc} file with a FCFS scheduler. You aren't allowed to import any libraries not already provided in the {\tt schedule.cc} file.
+The task for this assignment is to implement the scheduler API provided to you in the {\tt schedule.cc} file with variant of a multi level priority scheduler using Round Robin schedulers. This scheduler iterates through the different levels starting with the highest priority (priority 1) and choses the process next in the queue for that priority level to schedule for a specified quanta or time. The higher the priority the more quanta is given. Your implementation should mirror the quanta and number of priorities shown in Figure \ref{fig:multilevel}. 
+
+You aren't allowed to import any libraries not already provided in the {\tt schedule.cc} file.
 
 \section*{Data Structures in C}
 As you can't include any libraries for data structures you'll likely want to implement your own data structure to implement the FCFS scheduler. As such you'll need to do this in C code. As an example here is a simple implementation of a linked list in C using structs:
@@ -147,14 +158,14 @@ int main(){
 
 I have provided some tools to help you check your work.
 
-{\bf Reference solution.} I've included a reference output file with the expected solution. Your program should produce identical output to that of the {\tt ref.out} file. 
+{\bf Reference solution.} I've included a reference output file with the expected solution. Your program should produce identical output to that of the {\tt ref.out} file. There is also a {\tt simref} executable that will generate the reference output as well. 
 
 \section*{Hints}
 
 \begin{itemize}
 \item Read {\bf Section 6.3} of the Operating System Concepts Essentials 2nd edition
 book. 
-\item You don't get the source for the simulation, so make sure you don't delete the sim.o file or you'll have to get a new copy of the files to replace it. 
+
 
 \end{itemize}
 
@@ -170,7 +181,7 @@ time.
 
 \section*{Extra Credit - 10pts}
 
-You need to implement a priority scheduler in the {\tt schedule\_ec.cc} file. Just like the regular assignment, you are not allowed to include any extra libraries in your code. 
+I'm in the process of working out a potential EC scheduler for you to implement in addition to this assignment. If one gets created details will be updated here. 
 
 \begin{thebibliography}{3}
 

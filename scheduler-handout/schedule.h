@@ -2,8 +2,10 @@
 #define _schedule_h_
 
 
-int addProcess(int tid);
-int removeProcess(int tid);
-int nextProcess();
+void init();
+int addProcess(int pid, int priority);
+int removeProcess(int pid);
+int nextProcess(int &time);
+int hasProcess();
 
 #endif
