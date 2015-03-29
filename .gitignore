@@ -15,7 +15,6 @@ Thumbs.db
 
 #Paper/Presentation
 *.aux
-*.out
 *.aux
 *.bbl
 *.blg
@@ -33,3 +32,4 @@ Thumbs.db
 *.zip
 *.gz
 
+writeup/*.out
