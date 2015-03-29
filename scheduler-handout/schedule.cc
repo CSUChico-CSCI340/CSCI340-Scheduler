@@ -2,14 +2,14 @@
 #include <stdlib.h>
 
 
-/*
+/**
  * Function to initialize any global variables for the scheduler. 
  */
 void init(){
 	
 }
 
-/*
+/**
  * Function to add a process to the scheduler
  * @Param pid - the ID for the process/thread to be added to the 
  *      scheduler queue

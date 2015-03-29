@@ -48,6 +48,7 @@ int main(int argc, char **argv){
             if(processes[process]<0){
                 if(removeProcess(process)==1){
                     printf("Process %d Finished\n", process);
+                    break;
                 }
                 else{
                    // printf("Failed to remove Process: %d\n", process);
