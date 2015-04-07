@@ -20,7 +20,7 @@ int addProcess(int pid, int priority){
 	
 }
 
-/*
+/**
  * Function to remove a process from the scheduler queue
  * @Param pid - the ID for the process/thread to be removed from the
  *      scheduler queue
@@ -29,7 +29,7 @@ int addProcess(int pid, int priority){
 int removeProcess(int pid){
 	
 }
-/*
+/**
  * Function to get the next process from the scheduler
  * @Param time - pass by reference variable to store the quanta of time
  * 		the scheduled process should run for
@@ -40,7 +40,7 @@ int nextProcess(int &time){
 	
 }
 
-/*
+/**
  * Function that returns a boolean 1 True/0 False based on if there are any 
  * processes still scheduled
  * @Return 1 if there are processes still scheduled 0 if there are no more 
