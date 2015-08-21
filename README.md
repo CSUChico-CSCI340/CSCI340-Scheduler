@@ -26,7 +26,7 @@ Enter your name in the header comment at the top of *schedule.c*.
 
 Looking at the *schedule.c* file, you will see that it contains a rudimentary scheduler API to add a process, remove a process, and get the next process from your scheduler. Your job is to implement the code in schedule.c that implements a variant of a Multi Level Priority Scheduler using Round Robin schedulers.
 
-![MultiLevel Queue](https://github.com/CSUChico-CSCI340/CSCI340-Scheduler/raw/master/writeup/multilevel.pdf "MultiLevel Queue")
+![MultiLevel Queue](https://raw.githubusercontent.com/CSUChico-CSCI340/CSCI340-Scheduler/master/writeup/multilevel.png "MultiLevel Queue")
 
 Figure 1: Multi Level Round Robin Priority Scheduler
 
