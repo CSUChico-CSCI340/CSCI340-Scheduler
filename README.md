@@ -14,7 +14,7 @@ The only “hand-in” will be electronic. Any clarifications and revisions to t
 I recommend you use an Ubuntu Linux virtual machine to complete this assignment. Alternatively, you can use the jaguar machines or your native Linux install.
 
 You should download the project as a zip or clone it locally to the protected directory (the *lab directory*) in which you plan to do your work. Assuming you wish to put it in your home directory and are there:
-
+
 <pre>
 ~$ git clone git@github.com:CSUChico-CSCI340/CSCI340-Scheduler.git
 #Will now have folder CSCI340-Scheduler with files
