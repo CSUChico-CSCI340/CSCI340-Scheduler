@@ -5,7 +5,7 @@
 void init();
 int addProcess(int pid, int priority);
 int removeProcess(int pid);
-int nextProcess(int &time);
+int nextProcess(int *time);
 int hasProcess();
 
 #endif

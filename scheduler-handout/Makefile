@@ -7,7 +7,7 @@ sim = ./sim ./sim2
 #simec= ./simec
 CC = gcc
 CXX = g++
-CFLAGS = -Wall -O
+CFLAGS = -Wall -O 
 #FILES = $(sim) $(simec)
 FILES = $(sim)
 
