@@ -11,41 +11,26 @@ The only “hand-in” will be electronic. Any clarifications and revisions to t
 
 ##Hand Out Instructions
 
-I recommend you use an Ubuntu Linux virtual machine to complete this assignment. Alternatively, you can use the jaguar machines or your native Linux install. Download the file
-scheduler-handout.tar
-from the course “assignment” page.
-Start by copying the file
-scheduler-handout.tar
-to the protected directory (the
-lab directory
-) in
-which you plan to do your work. Then do the following:
+I recommend you use an Ubuntu Linux virtual machine to complete this assignment. Alternatively, you can use the jaguar machines or your native Linux install.
+
+You should download the project as a zip or clone it locally to the protected directory (the *lab directory*) in which you plan to do your work. Assuming you wish to put it in your home directory and are there:
 
-Type the command
-tar xvf scheduler-handout.tar
-to expand the tarfile.
-
-Type the command
-make
-to compile and link some test routines.
-
-Enter your name in the header comment at the top of
-schedule.cc
-.
-Looking at the
-schedule.cc
-file,  you will see that it contains a rudimentary scheduler API to add a
-process, remove a process, and get the next process from your scheduler. Your job is to implement the code
-in schedule.cc that implements a variant of a Multi Level Priority Scheduler using Round Robin schedulers.
-1
-Quanta = 4
-Quanta = 1
-Quanta = 2
-Quanta = 3
-Higher Priority
-Lower Priority
+<pre>
+~$ git clone git@github.com:CSUChico-CSCI340/CSCI340-Scheduler.git
+#Will now have folder CSCI340-Scheduler with files
+~$ cd CSCI340-Scheduler/
+~/CSCI340-Scheduler$ make
+</pre>
+
+Enter your name in the header comment at the top of *schedule.c*.
+
+Looking at the *schedule.c* file, you will see that it contains a rudimentary scheduler API to add a process, remove a process, and get the next process from your scheduler. Your job is to implement the code in schedule.c that implements a variant of a Multi Level Priority Scheduler using Round Robin schedulers.
+
+![MultiLevel Queue](https://github.com/CSUChico-CSCI340/CSCI340-Scheduler/raw/master/writeup/multilevel.pdf "MultiLevel Queue")
+
 Figure 1: Multi Level Round Robin Priority Scheduler
-General Overview of Schedulers
+
+##General Overview of Schedulers
 Taken from Wikipedia[1]
 In computer science, scheduling is the method by which threads, processes or data flows are given access
 to system resources (e.g. processor time, communications bandwidth). This is usually done to load balance
@@ -82,13 +67,13 @@ ble.  Scheduled tasks can also be distributed to remote devices across a network
 administrative back end.
 Your Task
 The task for this assignment is to implement the scheduler API provided to you in the
-schedule.cc
+schedule.c
 file with variant of a multi level priority scheduler using Round Robin schedulers.  This scheduler iterates
 through the different levels starting with the highest priority (priority 1) and choses the process next in the
 queue for that priority level to schedule for a specified quanta or time.  The higher the priority the more
 quanta is given. Your implementation should mirror the quanta and number of priorities shown in Figure 1.
 You aren’t allowed to import any libraries not already provided in the
-schedule.cc
+schedule.c
 file.
 Data Structures in C
 As you can’t include any libraries for data structures you’ll likely want to implement your own data structure
@@ -189,9 +174,9 @@ Your solution will be tested agains the reference output.  You will get full cre
 duces the reference output.
 Hand In Instructions
 You only have to change
-schedule.cc
+schedule.c
 . You need to upload
-schedule.cc
+schedule.c
 to the
 http://turnin.ecst.csuchico.edu/
 page to mark your completion time.
