@@ -71,83 +71,54 @@ You aren’t allowed to import any libraries not already provided in the
 schedule.c file.
 
 ##Data Structures in C
-As you can’t include any libraries for data structures you’ll likely want to implement your own data structure
-to implement the FCFS scheduler. As such you’ll need to do this in C code. As an example here is a simple
-implementation of a linked list in C using structs:
+As you can’t include any libraries for data structures you’ll likely want to implement your own data structure to implement the FCFS scheduler. As such you’ll need to do this in C code. As an example here is a simple implementation of a linked list in C using structs:
+
+<pre>
 #include <stdio.h>
 #include <stdlib.h>
 struct node {
-int value;
-struct node
-*
-next;
+	int value;
+	struct node* next;
 };
+
 int main(){
-int i;
-/
-*
-This will be the unchanging first node
-*
-/
-struct node
-*
-root;
-/
-*
-cur node for manipulating linked list
-*
-/
-struct node
-*
-cur;
-/
-*
-3
-*
-Now root points to a node struct
-*
-Dynamic allocation of memory the size of
-*
-a node in C (similar to new node in C++)
-*
-/
-root = (struct node
-*
-) malloc( sizeof(struct node));
-cur = root;
-for(i=0; i<10;i++){
-cur->value = i;
-cur->next = (struct node
-*
-) malloc( sizeof(struct node));
-cur = cur->next;
+	int i;
+	/* This will be the unchanging first node */
+	struct node* root;
+	/* cur node for manipulating linked list */
+	struct node* cur;
+	/*
+ 	 * Now root points to a node struct
+ 	 * Dynamic allocation of memory the size of
+ 	 * a node in C (similar to new node in C++)
+  	 */
+	root = (struct node*) malloc( sizeof(struct node));
+	cur = root;
+	for(i=0; i<10;i++){
+		cur->value = i;
+		cur->next = (struct node*) malloc( sizeof(struct node));
+		cur = cur->next;
+	}
+	//Create final values
+	cur->value = 10;
+	cur->next = NULL;
+	/* Now let’s print it out */
+	cur=root;
+	while(cur){
+		printf("%d ", cur->value);
+		cur=cur->next;
+	}
+	printf("\n");
+	/* Let’s free up memory */
+	while(root){
+		cur = root;
+		root = root->next;
+		free(cur); //like delete in C++
+	}
 }
-//Create final values
-cur->value = 10;
-cur->next = NULL;
-/
-*
-Now let’s print it out
-*
-/
-cur=root;
-while(cur){
-printf("%d ", cur->value);
-cur=cur->next;
-}
-printf("\n");
-/
-*
-Let’s free up memory
-*
-/
-while(root){
-cur = root;
-root = root->next;
-free(cur); //like delete
-}
-}
-Checking Your Work
+</pre>
+
+##Checking Your Work
 I have provided some tools to help you check your work.
 Reference solution.
 I’ve included a reference output file with the expected solution. Your program should
