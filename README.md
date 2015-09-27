@@ -125,8 +125,8 @@ I have provided some tools to help you check your work.
 
 
 ##Hints
-
-Read the [CPU Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf) and [Multi-Level Feedback Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf) sections from the online textbook.
+
+* Read the [CPU Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf) and [Multi-Level Feedback Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf) sections from the online textbook.
 
 ##Evaluation
 Your solution will be tested agains the reference output. You will get full credit if your assignment reproduces the reference output. Grades for this assignment will be assigned as follows:
