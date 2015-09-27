@@ -31,7 +31,7 @@ int removeProcess(int pid){
 }
 /**
  * Function to get the next process from the scheduler
- * @Param time - pass by reference variable to store the quanta of time
+ * @Param time - pass by pointer variable to store the quanta of time
  * 		the scheduled process should run for
  * @Return returns the thread id of the next process that should be
  *      executed, returns -1 if there are no processes

@@ -29,27 +29,19 @@ int main(int argc, char **argv){
     int i;
     for(i=0;i<10;i++){
         processes[i]=100;
-        int priority = i%4+1;
-        printf("Scheduled Process: %d, Priority:%d\n", i, priority);
-        addProcess(i,priority);
+        printf("Scheduled Process: %d\n", i);
+        addProcess(i);
     }
 
     int process = 0;
-    int time = 0;
     while(hasProcess()){
-        process = nextProcess(&time);
-        for(;time>0;time--){
+        process = nextProcess();
+        for(;;){
             printf("Process %d executed\n", process);
             processes[process]--;
             if(processes[process]<0){
-                if(removeProcess(process)==1){
-                    printf("Process %d Finished\n", process);
-                    break;
-                }
-                else{
-                   // printf("Failed to remove Process: %d\n", process);
-                }
-                continue;
+                printf("Process %d Finished\n", process);
+                break;
             }
         }
     }
