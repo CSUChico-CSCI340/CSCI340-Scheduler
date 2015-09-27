@@ -120,32 +120,26 @@ int main(){
 
 ##Checking Your Work
 I have provided some tools to help you check your work.
-Reference solution.
-I’ve included a reference output file with the expected solution. Your program should
-produce identical output to that of the
-ref.out
-file. There is also a
-simref
-executable that will generate
-the reference output as well.
-4
 
-Hints
+* **Reference solution.** - I’ve included a reference output file with the expected solution for each scheduler you need to write. Your program should produce identical output to that of the ref.out file.
+
+
+##Hints
 
-Read
-Section 6.3
-of the Operating System Concepts Essentials 2nd edition book.
-Evaluation
-Your solution will be tested agains the reference output.  You will get full credit if your assignment repro-
-duces the reference output.
-Hand In Instructions
-You only have to change
-schedule.c
-. You need to upload
-schedule.c
-to the
-http://turnin.ecst.csuchico.edu/
-page to mark your completion time.
+Read the [CPU Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf) and [Multi-Level Feedback Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf) sections from the online textbook.
+
+##Evaluation
+Your solution will be tested agains the reference output. You will get full credit if your assignment reproduces the reference output. Grades for this assignment will be assigned as follows:
+
+* 10% - Simple Scheduler working
+* 20% - Simple Round Robin working
+* 30% - Multi-Level Round Robin working
+* 40% - Multi-Level Feedback working
+
+So if you get all of them working you'll get 100%.
+
+##Hand In Instructions
+You only have to change schedule.c. You need to upload schedule.c to the http://turnin.ecst.csuchico.edu/ page to mark your completion time. There will be a turnin submission for each of the different schedulers so make sure you submit to the correct scheduler submission.
 
 ##References
 1. Wikipedia. “Scheduling (computing)”. Wikipedia, The Free Encyclopedia. 2012. http://en.wikipedia.org/wiki/Process_scheduler. Online; accessed 16-February-2014.
