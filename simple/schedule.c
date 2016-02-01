@@ -12,22 +12,22 @@ void init(){
 
 /**
  * Function to add a process to the scheduler
- * @Param pid - the ID for the process/thread to be added to the
+ * @Param PCB * - pointer to the PCB for the process/thread to be added to the
  *      scheduler queue
  * @return true/false response for if the addition was successful
  */
-int addProcess(int pid){
+int addProcess(PCB *process){
     return 0;
 }
 
 /**
  * Function to get the next process from the scheduler
  *
- * @Return returns the thread id of the next process that should be
- *      executed, returns -1 if there are no processes
+ * @Return returns the Process Control Block of the next process that should be
+ *      executed, returns NULL if there are no processes
  */
-int nextProcess(){
-	return -1;
+PCB* nextProcess(){
+	return NULL;
 }
 
 /**

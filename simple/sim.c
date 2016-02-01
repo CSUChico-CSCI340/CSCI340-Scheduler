@@ -30,19 +30,24 @@ int main(int argc, char **argv){
     for(i=0;i<10;i++){
         processes[i]=100;
         printf("Scheduled Process: %d\n", i);
-        addProcess(i);
+        PCB* proc = (PCB *) malloc(sizeof(PCB));
+        proc->pid = i;
+        proc->priority=0;
+        addProcess(proc);
     }
 
-    int process = 0;
+    PCB* process = 0;
     while(hasProcess()){
         process = nextProcess();
-        for(;;){
-            printf("Process %d executed\n", process);
-            processes[process]--;
-            if(processes[process]<0){
-                printf("Process %d Finished\n", process);
-                break;
-            }
+        if(process){
+          for(;;){
+              printf("Process %d executed\n", process->pid);
+              processes[process->pid]--;
+              if(processes[process->pid]<0){
+                  printf("Process %d Finished\n", process->pid);
+                  break;
+              }
+          }
         }
     }
 
