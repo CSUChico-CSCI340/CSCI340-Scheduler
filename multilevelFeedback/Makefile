@@ -11,7 +11,7 @@ FILES = $(sim)
 all: $(FILES)
 
 sim: sim.o schedule.o
-	$(CC) -o sim sim.o schedule.o
+	$(CC) $(CFLAGS) -o sim sim.o schedule.o
 
 clean:
 	rm -f $(FILES) *.o
