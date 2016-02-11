@@ -25,10 +25,13 @@ int main(int argc, char **argv){
     for(i=0;i<10;i++){
         processes[i]=100;
         printf("Scheduled Process: %d\n", i);
-        addProcess(i);
+        PCB* proc = (PCB *) malloc(sizeof(PCB));
+        proc->pid = i;
+        proc->priority=0;
+        addProcess(proc);
     }
 
-    int process = 0;
+    PCB* process = NULL;
     int time = 0;
     while(hasProcess()){
         process = nextProcess(&time);
@@ -37,18 +40,15 @@ int main(int argc, char **argv){
             exit(1);
         }
         for(;time>0;time--){
-            printf("Process %d executed\n", process);
-            processes[process]--;
-            if(processes[process]<0){
-                if(removeProcess(process)==1){
-                    printf("Process %d Finished\n", process);
-                    break;
-                }
-                else{
-                   // printf("Failed to remove Process: %d\n", process);
-                }
-                continue;
+            printf("Process %d executed\n", process->pid);
+            processes[process->pid]--;
+            if(processes[process->pid]<0){
+                printf("Process %d Finished\n", process->pid);
+                break;
             }
+        }
+        if(processes[process->pid]>=0){
+            addProcess(process);
         }
     }
 
