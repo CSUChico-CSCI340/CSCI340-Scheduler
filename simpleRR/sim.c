@@ -32,8 +32,9 @@ int main(int argc, char **argv){
     int time = 0;
     while(hasProcess()){
         process = nextProcess(&time);
-        if(process<0){
-          exit(0);
+        if(!process){
+            printf("NULL Process, something went wrong in your code.\n");
+            exit(1);
         }
         for(;time>0;time--){
             printf("Process %d executed\n", process);

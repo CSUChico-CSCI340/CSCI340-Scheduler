@@ -12,33 +12,23 @@ void init(){
 
 /**
  * Function to add a process to the scheduler
- * @Param pid - the ID for the process/thread to be added to the
- *      scheduler queue
+ * @Param process - Pointer to the process control block for the process that
+ * 			needs to be scheduled. PCB is defined in the header.
  * @return true/false response for if the addition was successful
  */
-int addProcess(int pid){
+int addProcess(PCB* process){
 	return 0;
 }
 
 /**
- * Function to remove a process from the scheduler queue
- * @Param pid - the ID for the process/thread to be removed from the
- *      scheduler queue
- * @Return true/false response for if the removal was successful
- */
-int removeProcess(int pid){
-
-  return 0;
-}
-/**
  * Function to get the next process from the scheduler
- * @Param time - pass by pointer variable to store the quanta of time
+ * @Param time - pass by reference variable to store the quanta of time
  * 		the scheduled process should run for
- * @Return returns the thread id of the next process that should be
- *      executed, returns -1 if there are no processes
+ * @Return returns pointer to process control block that needs to be executed
+ * 		returns NULL if there is no process to be scheduled.
  */
-int nextProcess(int *time){
-  return -1;
+PCB* nextProcess(int *time){
+  return NULL;
 }
 
 /**

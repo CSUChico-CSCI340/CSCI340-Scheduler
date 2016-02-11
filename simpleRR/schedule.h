@@ -2,10 +2,15 @@
 #define _schedule_h_
 
 
+typedef struct
+{
+ int pid;
+ int priority;
+} PCB;
+
 void init();
-int addProcess(int pid);
-int removeProcess(int pid);
-int nextProcess(int *time);
+int addProcess(PCB* process);
+PCB* nextProcess(int *time);
 int hasProcess();
 
 #endif

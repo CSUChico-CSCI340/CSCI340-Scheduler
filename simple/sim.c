@@ -39,6 +39,10 @@ int main(int argc, char **argv){
     PCB* process = 0;
     while(hasProcess()){
         process = nextProcess();
+        if(!process){
+            printf("NULL Process, something went wrong in your code.\n");
+            exit(1);
+        }
         if(process){
           for(;;){
               printf("Process %d executed\n", process->pid);
