@@ -37,7 +37,7 @@ int main(int argc, char **argv){
         proc->priority=priority;
         addProcess(proc);
     }
-    PCB* process = 0;
+    PCB* process = NULL;
     int count = 0;
     int time = 0;
     while(hasProcess()){
