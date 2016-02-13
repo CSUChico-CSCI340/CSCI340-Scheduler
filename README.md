@@ -55,7 +55,7 @@ The task for this assignment is to implement the scheduler APIs provided to you 
 
 * Simple - A simple FCFS scheduler
 * Simple Round Robin - A simple Round Robin scheduler with a quanta of 4 time units.
-* Multi Level Round Robin - A variant of a MultiLevel priority scheduler using Round Robin schedulers. This scheduler iterates through the different levels starting with the highest priority (priority 1) and choses the process next in the queue for that priority level to schedule for a specified quanta or time. The higher the priority the more quanta is given. Your implementation should mirror the quanta and number of priorities shown in Figure 1.  
+* Multi Level Round Robin - A variant of a MultiLevel priority scheduler using Round Robin schedulers. This scheduler iterates through the different levels starting with the highest priority (priority 0) and choses the process next in the queue for that priority level to schedule for a specified quanta or time. The higher the priority the more quanta is given. Your implementation should mirror the quanta and number of priorities shown in Figure 1.  
 
 ![MultiLevel Queue](https://raw.githubusercontent.com/CSUChico-CSCI340/CSCI340-Scheduler/master/images/multilevel.png "MultiLevel Queue")
 
