@@ -30,7 +30,7 @@ int main(int argc, char **argv){
     int i;
     for(i=0;i<10;i++){
         processes[i]=100;
-        int priority = i%4+1;
+        int priority = i%4;
         printf("Scheduled Process: %d, Priority:%d\n", i, priority);
         PCB* proc = (PCB *) malloc(sizeof(PCB));
         proc->pid = i;
@@ -60,7 +60,7 @@ int main(int argc, char **argv){
         if(count==400){
             for(;i<14;i++){
                 processes[i]=100;
-                int priority = i%4+1;
+                int priority = i%4;
                 printf("Scheduled Process: %d, Priority:%d\n", i, priority);
                 PCB* proc = (PCB *) malloc(sizeof(PCB));
                 proc->pid = i;
