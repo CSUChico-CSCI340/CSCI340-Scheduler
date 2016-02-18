@@ -50,7 +50,7 @@ int main(int argc, char **argv){
             printf("Process %d executed\n", process->pid);
             processes[process->pid]--;
             if(processes[process->pid]<0){
-                printf("Process %d Finished\n", process);
+                printf("Process %d Finished\n", process->pid);
             }
             count++;
         }
