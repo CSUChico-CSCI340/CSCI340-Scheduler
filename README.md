@@ -1,15 +1,15 @@
-#Writing a Scheduler
+# Writing a Scheduler
 California State University - Chico
 
 By Bryan Dixon
 
-##Introduction
+## Introduction
 The purpose of this assignment is for you gain insight into how schedulers work on the system.
 
-##Logistics
+## Logistics
 The only “hand-in” will be electronic. Any clarifications and revisions to the assignment will be posted here and emailed out to the class.
 
-##Hand Out Instructions
+## Hand Out Instructions
 
 I recommend you use an Ubuntu Linux virtual machine to complete this assignment. Alternatively, you can use the jaguar machines or your native Linux install.
 
@@ -33,7 +33,7 @@ Looking at each *schedule.c* file, you will see that it contains a rudimentary s
 I would recommend implementing these in the order discussed later in this document as to some extent they will build upon the concepts of the earlier schedule as they get more complicated.
 
 
-##General Overview of Schedulers
+## General Overview of Schedulers
 Taken from Wikipedia[1]
 In computer science, scheduling is the method by which threads, processes or data flows are given access to system resources (e.g. processor time, communications bandwidth). This is usually done to load balance and share system resources effectively or achieve a target quality of service.  The need for a scheduling algorithm arises from the requirement for most modern systems to perform multitasking (executing more than one process at a time) and multiplexing (transmit multiple data streams simultaneously across a single physical channel).
 
@@ -50,7 +50,7 @@ In practice, these goals often conflict (e.g. throughput versus latency), thus a
 
 
 
-##Your Task
+## Your Task
 The task for this assignment is to implement the scheduler APIs provided to you in the schedule.c files for the following schedulers:
 
 * Simple - A simple FCFS scheduler
@@ -70,7 +70,7 @@ Figure 2: Multi Level Feedback Priority Scheduler
 You aren’t allowed to import any libraries not already provided in the
 schedule.c file.
 
-##Data Structures in C
+## Data Structures in C
 As you can’t include any libraries for data structures you’ll likely want to implement your own data structure to implement the FCFS scheduler. As such you’ll need to do this in C code. As an example here is a simple implementation of a linked list in C using structs:
 
 <pre>
@@ -118,17 +118,17 @@ int main(){
 }
 </pre>
 
-##Checking Your Work
+## Checking Your Work
 I have provided some tools to help you check your work.
 
 * **Reference solution.** - I’ve included a reference output file with the expected solution for each scheduler you need to write. Your program should produce identical output to that of the ref.out file.
 
 
-##Hints
+## Hints
 
 * Read the [CPU Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf) and [Multi-Level Feedback Scheduling](http://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf) sections from the online textbook.
 
-##Evaluation
+## Evaluation
 Your solution will be tested agains the reference output. You will get full credit if your assignment reproduces the reference output. Grades for this assignment will be assigned as follows:
 
 * 10% - Simple Scheduler working
@@ -138,8 +138,8 @@ Your solution will be tested agains the reference output. You will get full cred
 
 So if you get all of them working you'll get 100%.
 
-##Hand In Instructions
+## Hand In Instructions
 You only have to change schedule.c. You need to upload schedule.c to the https://turnin.ecst.csuchico.edu/ page to mark your completion time. There will be a turnin submission for each of the different schedulers so make sure you submit to the correct scheduler submission.
 
-##References
+## References
 1. Wikipedia. “Scheduling (computing)”. Wikipedia, The Free Encyclopedia. 2012. http://en.wikipedia.org/wiki/Process_scheduler. Online; accessed 16-February-2014.
