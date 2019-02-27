@@ -49,6 +49,7 @@ int main(int argc, char **argv){
               processes[process->pid]--;
               if(processes[process->pid]<0){
                   printf("Process %d Finished\n", process->pid);
+                  free(process);
                   break;
               }
           }
