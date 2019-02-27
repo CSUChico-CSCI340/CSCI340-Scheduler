@@ -85,6 +85,8 @@ int main(int argc, char **argv){
           }
           if(processes[process->pid]>=0){
             addProcess(process);
+          } else {  
+            free(process);
           }
         }
         else{
@@ -119,6 +121,7 @@ int main(int argc, char **argv){
               }
             }
             printf("Process %d Finished\n", process->pid);
+            free(process);
         }
     }
 

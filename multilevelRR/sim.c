@@ -56,7 +56,9 @@ int main(int argc, char **argv){
         }
         if(processes[process->pid]>=0){
             addProcess(process);
-        }
+        } else {
+            free(process);
+	}
         if(count==400){
             for(;i<14;i++){
                 processes[i]=100;
