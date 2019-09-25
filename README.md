@@ -73,7 +73,7 @@ schedule.c file.
 ## Data Structures in C
 As you can’t include any libraries for data structures you’ll likely want to implement your own data structure to implement the FCFS scheduler. As such you’ll need to do this in C code. As an example here is a simple implementation of a linked list in C using structs:
 
-<pre>
+```C
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 struct node {
@@ -116,7 +116,7 @@ int main(){
 		free(cur); //like delete in C++
 	}
 }
-</pre>
+```
 
 ## Checking Your Work
 I have provided some tools to help you check your work.
