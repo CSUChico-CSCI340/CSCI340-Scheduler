@@ -1,10 +1,3 @@
-//
-//
-//
-// <Put your name and ID here>
-//
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
