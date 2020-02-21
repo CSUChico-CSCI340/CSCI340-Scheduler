@@ -5,7 +5,7 @@ VERSION = 1
 sim = ./sim
 CC = gcc
 CXX = g++
-CFLAGS = -Wall -O -g
+CFLAGS = -Wall -O -g -std=c11
 FILES = $(sim)
 
 all: $(FILES)
