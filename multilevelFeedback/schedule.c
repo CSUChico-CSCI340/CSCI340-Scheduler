@@ -31,7 +31,7 @@ int addProcess(PCB* process){
 /**
  * Function to get the next process from the scheduler
  * @Param time - pass by reference variable to store the quanta of time
- * 		the scheduled process should run for
+ * 		the scheduled process should run for. Return -1 for FCFS.
  * @Return returns pointer to process control block that needs to be executed
  * 		returns NULL if there is no process to be scheduled.
  */
