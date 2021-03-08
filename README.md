@@ -15,14 +15,14 @@ I recommend you use an Ubuntu Linux virtual machine to complete this assignment.
 
 You should download the project as a zip or clone it locally to the protected directory (the *lab directory*) in which you plan to do your work. Assuming you wish to put it in your home directory and are there:
 
-<pre>
+```bash
 ~$ git clone git@github.com:CSUChico-CSCI340/CSCI340-Scheduler.git
 #Will now have folder CSCI340-Scheduler with files
 $ cd CSCI340-Scheduler/
 $ ls
 LICENSE			images/			multilevelRR/		simpleRR/
 README.md		multilevelFeedback/	simple/
-</pre>
+```
 
 As you can see there are 5 folders contained in this repo. The images folder you can ignore as this is a holder for the images in the README. The other four folders contain the starter API code and simulator to test your code for each of the four schedulers you will be writing in this assignment.
 
