@@ -134,8 +134,8 @@ Your solution will be tested agains the reference output. You will get full cred
 
 * 10% - Simple Scheduler working
 * 20% - Simple Round Robin working
-* 30% - Multi-Level Round Robin working
-* 40% - Multi-Level Feedback working
+* 35% - Multi-Level Round Robin working
+* 35% - Multi-Level Feedback working
 
 So if you get all of them working you'll get 100%.
 
