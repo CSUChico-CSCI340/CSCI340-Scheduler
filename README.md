@@ -140,7 +140,7 @@ Your solution will be tested agains the reference output. You will get full cred
 So if you get all of them working you'll get 100%.
 
 ## Hand In Instructions
-You only have to change schedule.c. You need to upload schedule.c to the https://turnin.ecst.csuchico.edu/ page to mark your completion time. There will be a turnin submission for each of the different schedulers so make sure you submit to the correct scheduler submission.
+You only have to change schedule.c. You need to upload schedule.c to the INGInious submission pages to mark your completion time. There will be a INGInious submission for each of the different schedulers so make sure you submit to the correct scheduler submission.
 
 ## References
 1. Wikipedia. “Scheduling (computing)”. Wikipedia, The Free Encyclopedia. 2012. http://en.wikipedia.org/wiki/Process_scheduler. Online; accessed 16-February-2014.
